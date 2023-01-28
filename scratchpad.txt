@@ -1,0 +1,39 @@
+//Display viewport2
+document.querySelector("#contain").style.display = "none"; 
+document.querySelector("#viewport2").style.display = "block";
+
+//Display VN Text
+document.querySelector("#contain").style.display = "block"; 
+document.querySelector("#viewport2").style.display = "none";
+
+//Insert Test Sprite into Viewport 
+var testSprite = document.createElement("img");
+testSprite.classList.add("left-viewport");
+testSprite.setAttribute('src',"sprites/testMug.gif");
+document.querySelector("#viewport").appendChild(testSprite);
+
+//Insert Test Sprite2 into Viewport
+var testSprite2 = document.createElement("img");
+testSprite2.classList.add("right-viewport");
+testSprite2.classList.add("talking");
+testSprite2.setAttribute('src',"sprites/testMug.gif");
+document.querySelector("#viewport").appendChild(testSprite2);
+
+
+#Sprites must fit into ~216px x 420px(exactly) (draw to face left)
+
+#BG images/videos must be exported at 600px x 450px
+
+#To Do:
+-refactor placeSprite
+-Sprites only need name and location
+-setPosition method: removes current position class, places new class
+-setTalking method: removes talking from current sprite, places on new sprite
+-Clean up/refactor attributions (maybe 'setTalking' can change the attribution)
+-need ways to parse for these methods in the game text 
+-video handler methods. use 'ended' event to do things after the video ends
+https://stackoverflow.com/questions/21471116/html5-video-waiting-for-video-end-waiting-for-video-ready
+
+-draw 2-3 sprites each for Aya/Haruki 
+-figure out CGs/animations
+-write script/dialogue
